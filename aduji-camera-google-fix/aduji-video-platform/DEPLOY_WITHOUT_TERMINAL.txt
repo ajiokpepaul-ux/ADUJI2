@@ -1,0 +1,9 @@
+ADUJI — deploy without using a terminal
+
+1. Extract this ZIP on your computer.
+2. Upload the CONTENTS of the aduji-video-platform folder to the ROOT of your GitHub repository. The root must show index.html, package.json, src/, and supabase/. Do not upload node_modules, .env.local, .git, dist, or this ZIP.
+3. In Vercel, use the connected GitHub repo. Root Directory: ./; Build Command: npm run build; Output Directory: dist.
+4. In Vercel Project Settings → Environment Variables add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY. Redeploy after saving. Never put secret/service-role keys in VITE_ variables.
+5. In Supabase SQL Editor run supabase/schema.sql.
+6. Enable Google provider in Supabase Authentication → Providers → Google. Create a Google OAuth client and add the Supabase callback URL displayed in Supabase to the Google authorized redirect URIs. Add the deployed Vercel URL to Supabase Authentication → URL Configuration → Redirect URLs.
+7. See README.md for Google OAuth details and live-streaming requirements. Live Studio is still a preview until a streaming provider plus a server-side token endpoint is configured.
