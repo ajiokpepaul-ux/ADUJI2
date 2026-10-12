@@ -1,0 +1,14 @@
+ADUJI: DEPLOY WITHOUT USING TERMINAL
+
+1) Download and extract aduji-rebuilt.zip on your computer.
+2) Open your GitHub repository in Chrome.
+3) Use Add file > Upload files. Drag the extracted PROJECT CONTENTS into the page (not the outer folder). Commit changes.
+4) Make sure index.html, package.json, src, and supabase are all visible together on the repository main page.
+5) Open Vercel and import/select the ADUJI GitHub repository.
+6) Build command: npm run build. Output directory: dist. Root directory: ./
+7) In Vercel Settings > Environment Variables add VITE_SUPABASE_URL and VITE_SUPABASE_PUBLISHABLE_KEY.
+8) Run supabase/schema.sql in Supabase Dashboard > SQL Editor.
+9) In Vercel Deployments, redeploy and open the URL shown when it succeeds.
+
+A terminal is NOT required for the Vercel deployment route.
+Real camera livestreaming needs a streaming provider integration; this project has the live studio UI and room preview, not production broadcast ingest yet. Gifts are demo-only, not real-money purchases.
